@@ -8,6 +8,11 @@
 
     svg {
       margin-right: 8px;
+      transform:rotate(180deg);
+      &.active{
+      transform:rotate(0);
+
+      }
     }
 
     b {
@@ -37,10 +42,12 @@
       li {
         padding: 12px 20px;
         cursor: pointer;
+        transition:.3s;
 
         &.active,
         &:hover {
           background: rgba(254, 95, 30, 0.05);
+          color:$orange;
         }
 
         &.active {
