@@ -14,7 +14,7 @@ React.useEffect(() => {
         <div className='content'>
         <div className='container'>
           <div className='content__top'>
-            <Categories/>
+            <Categories items={['Все','Мясные', 'Вегетарианские', 'Гриль', 'Острый', 'Зеленые']}/>
             <Sort/>
           </div>
           <h2 className='content__title'>Все пиццы</h2>

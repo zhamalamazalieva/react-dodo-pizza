@@ -1,7 +1,10 @@
 import React from 'react';
+import Types from './types';
+import Sizes from './sizes';
 
 
-const PizzaItem = ({name, imageUrl, price}) => {
+
+const PizzaItem = ({name, imageUrl, price, types, sizes}) => {
     return (
         <div className='pizza-block'>
         <img
@@ -15,11 +18,7 @@ const PizzaItem = ({name, imageUrl, price}) => {
             <li className='active'>тонкое</li>
             <li>традиционное</li>
           </ul>
-          <ul>
-            <li className='active'>26 см.</li>
-            <li>30 см.</li>
-            <li>40 см.</li>
-          </ul>
+          <Sizes sizes={sizes}/>
         </div>
         <div className='pizza-block__bottom'>
           <div className='pizza-block__price'>от {price} ₽</div>
