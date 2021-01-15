@@ -43,7 +43,7 @@ const Sort = () => {
                   setActiveItem(index)
                   setActivePopUp(false)
                 }}
-                className={`${activePopUp === index ? 'active' : ''}`}>{item}</li>
+                className={`${activeItem === index ? 'active' : ''}`}>{item}</li>
               )
             })}
            </ul>

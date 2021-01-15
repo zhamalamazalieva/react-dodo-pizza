@@ -1,10 +1,22 @@
-import React from 'react'
+import React from 'react';
+import classNames from 'classnames';
 
-const Types = () => {
+const Types = ({types}) => {
+    const typesNames = ['тонкое', 'традиционное'];
+    const [activeType, setActiveType] = React.useState(0)
     return (
-        <div>
-            
-        </div>
+    <ul>
+       {typesNames.map((item, index)=> {
+           return(
+               <li onClick={() => {setActiveType(index)}}
+                    className={classNames({
+                        active:activeType === index,
+                        disable:!types.includes(index)
+                    })}
+               >{item}</li>
+           )
+       })}
+    </ul>
     )
 }
 

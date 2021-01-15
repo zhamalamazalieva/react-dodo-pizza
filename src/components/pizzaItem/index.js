@@ -14,10 +14,7 @@ const PizzaItem = ({name, imageUrl, price, types, sizes}) => {
         />
         <h4 className='pizza-block__title'>{name}</h4>
         <div className='pizza-block__selector'>
-          <ul>
-            <li className='active'>тонкое</li>
-            <li>традиционное</li>
-          </ul>
+          <Types types={types}/>
           <Sizes sizes={sizes}/>
         </div>
         <div className='pizza-block__bottom'>
