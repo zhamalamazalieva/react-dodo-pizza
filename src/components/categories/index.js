@@ -13,8 +13,7 @@ const Categories = ({items}) => {
             onClick={() => {setActiveCatergory(index)}}
             className={`${activeCategory == index ? 'active' : ''}`}>{item}</li>
           )
-          })}
-         
+          })}         
         </ul>
     </div>
     )

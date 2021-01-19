@@ -13,7 +13,7 @@ const [drinks, setDrinks] = React.useState([]);
 const [searchValue, setSearchValue] = React.useState('');
 
 React.useEffect(() => {
-  fetch("http://localhost:3001/db.json")
+  fetch("http://localhost:3000/db.json")
   .then(res => res.json())
   .then(({pizzas, snacks,desserts , drinks}) => {
     setPizzas(pizzas);
@@ -34,15 +34,14 @@ React.useEffect(() => {
           </div>
           <h2 className='content__title'>Все пиццы</h2>
           <div className='content__items'>
-           {pizzas.filter((item) =>{
-             if(searchValue === " "){
+           {pizzas.filter(item =>{
+             if(searchValue === ''){
                return item
              }
              else if(item.name.toLowerCase().includes(searchValue.toLowerCase())){
                return item
              }
-           })
-           
+           })           
            .map(item => {
              return <PizzaItem {...item}/>
            })}

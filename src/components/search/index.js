@@ -37,7 +37,7 @@ const SearchBar = ({setSearchValue}) => {
         return (
           <Paper component="form" className={classes.root}>
             <InputBase
-              onClick={(event) => handleClick(event)}
+              onChange={(event) => handleClick(event)}
               className={classes.input}
               placeholder="Поиск по названию"
               inputProps={{ 'aria-label': 'search google maps' }}

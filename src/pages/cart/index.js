@@ -1,5 +1,6 @@
 import React from "react";
 import CartItem from '../../components/cartItem';
+import EmptyCart from '../../assets/img/empty-cart.png';
 
 const Cart = () => {
   const emptyObj=[]
@@ -141,7 +142,7 @@ const Cart = () => {
                 Вероятней всего, вы не заказывали ещё пиццу.<br />
                 Для того, чтобы заказать пиццу, перейди на главную страницу.
               </p>
-              <img src="/img/empty-cart.png" alt="Empty cart" />
+              <img src={EmptyCart} alt="Empty cart" />
               <a href="/" class="button button--black">
                 <span>Вернуться назад</span>
               </a>
