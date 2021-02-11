@@ -1,24 +1,11 @@
-import { createStore } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import rootReducer from './reducers';
+import thunk from 'redux-thunk';
 
-function counter(state = 0, action) {
-  if(action.type === 'INCREMENT'){
-      return state +4;
-  }
-  else if (action.type=='DECREMENT'){
-    return state -1;
-  }
-  }
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
-  let store = createStore(counter);
+window.store = store;
 
-  store.subscribe(() =>
-  console.log(store.getState())
-)
-
-    // Единственный способ изменить внутреннее состояние - это вызвать экшен
-    // Экшены могут быть сериализированы, залогированы или сохранены и далее воспроизведены.
-    store.dispatch({ type: 'INCREMENT' })
-
-
-    export default store;
+export default store;
