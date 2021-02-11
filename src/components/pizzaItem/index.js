@@ -7,6 +7,7 @@ import Sizes from './sizes';
 const PizzaItem = ({name, imageUrl, price, types, sizes}) => {
     return (
         <div className='pizza-block'>
+        <div className='pizza-block__item'>
         <img
           className='pizza-block__image'
           src={imageUrl}
@@ -34,6 +35,7 @@ const PizzaItem = ({name, imageUrl, price, types, sizes}) => {
        <span>Добавить</span>
             <i>2</i>
           </div>
+        </div>
         </div>
         </div>           
     )

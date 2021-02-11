@@ -4,7 +4,6 @@ import Cart from './pages/cart';
 import Header from './components/header';
 import './assets/scss/app.scss';
 import {Route} from 'react-router-dom';
-import store from './redux/store';
 
 function App() {
   return (

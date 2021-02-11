@@ -9,6 +9,7 @@ const Sizes = ({sizes}) => {
             {sizes.map((item, index) => {
                 return(
                     <li
+                    key={item}
                     onClick={() => {setActiveSize(index)}} 
                     className={`${activeSize === index ? 'active' : ''}`}>{item}</li>
                 )

@@ -10,6 +10,7 @@ const Categories = ({items}) => {
            {items.map((item, index) => {
           return  (
             <li 
+            key={item}
             onClick={() => {setActiveCatergory(index)}}
             className={`${activeCategory == index ? 'active' : ''}`}>{item}</li>
           )

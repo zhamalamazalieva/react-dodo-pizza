@@ -9,7 +9,8 @@ const Types = ({types}) => {
        {typesNames.map((item, index)=> {
            return(
                <li onClick={() => {setActiveType(index)}}
-                    className={classNames({
+                   key={item}
+                   className={classNames({
                         active:activeType === index,
                         disable:!types.includes(index)
                     })}

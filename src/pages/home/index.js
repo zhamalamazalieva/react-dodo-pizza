@@ -43,25 +43,25 @@ React.useEffect(() => {
              }
            })           
            .map(item => {
-             return <PizzaItem {...item}/>
+             return <PizzaItem key={item.id} {...item}/>
            })}
           </div>
           <h2 className='content__title'>Закуски</h2>
           <div className='content__items'>
            {snacks.map(item => {
-             return <Item {...item}/>
+             return <Item key={item.id} {...item}/>
            })}
           </div>
            <h2 className='content__title'>Десерты</h2>
           <div className='content__items'>
            {desserts.map(item => {
-             return <Item {...item}/>
+             return <Item key={item.id} {...item}/>
            })}
           </div>
            <h2 className='content__title'>Напитки</h2>
           <div className='content__items'>
            {drinks.map(item => {
-             return <Item {...item}/>
+             return <Item key={item.id} {...item}/>
            })}
           </div>
         </div>
