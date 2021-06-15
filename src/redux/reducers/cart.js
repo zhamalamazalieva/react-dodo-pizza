@@ -1,2 +1,5 @@
-const cart = () => {};
-export default cart;
+const Cart = () => {
+
+}
+
+export default Cart

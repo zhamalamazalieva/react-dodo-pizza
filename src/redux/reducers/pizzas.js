@@ -1,2 +1,4 @@
-const pizzas = () => {}
-export default pizzas;
+const Pizzas = () => {
+
+}
+export default Pizzas
